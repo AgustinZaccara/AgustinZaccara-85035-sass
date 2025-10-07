@@ -1,0 +1,50 @@
+@use "../utilities/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: $color-bg; 
+    color: $color-text; 
+    font-family: $font-main;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg; 
+    h1,h2,h3 {
+            color: $color-muted;
+     }
+     p {
+        color: $color-text;
+        }
+}
+
+main {
+    flex: 1; 
+     }
+
+
+
+a {
+    color: $color-accent; 
+    text-decoration: none;
+    &:hover {
+        color: $color-hover;
+    }
+}
+
+// Estilo para tarjetas/paneles
+.card, .product, .category, .offer {
+    background-color: $color-panel; 
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}

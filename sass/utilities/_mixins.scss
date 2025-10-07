@@ -1,0 +1,26 @@
+@use "./variables" as *;
+
+@mixin flex-center($dir: row, $jc: center, $ai: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: #{$bp-sm}) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: #{$bp-md}) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: #{$bp-lg}) { @content; }
+  }
+}
+
+@mixin card {
+  background: $color-panel;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  box-shadow: $shadow-soft;
+  transition: 0.3s ease;
+}

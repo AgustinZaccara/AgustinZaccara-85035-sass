@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Ajustes del navbar Bootstrap
+.navbar-dark.bg-dark {
+  background-color: $color-panel;
+  border-bottom: 1px solid $color-border;
+}
+
+.navbar-dark .navbar-brand {
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: $color-accent;
+
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $color-text;
+  font-weight: 600;
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.navbar-toggler {
+  border-color: rgba($color-accent, 0.5);
+  &:focus { box-shadow: 0 0 0 0.2rem rgba($color-accent, 0.25); }
+}
+
+.btn-danger {
+  background-color: $color-accent;
+  border: 1px solid $color-accent;
+  color: $color-text;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: $color-panel;
+  border-top: 1px solid $color-border;
+  color: $color-muted;
+  flex-shrink: 0;
+
+  .socials {
+    margin-top: 10px;
+    a {
+      font-size: 22px;
+      margin: 0 8px;
+      color: $color-text;
+      transition: 0.3s;
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

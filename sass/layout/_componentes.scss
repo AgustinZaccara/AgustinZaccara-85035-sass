@@ -1,0 +1,82 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.banner, .banner2 {
+  text-align: center;
+  padding: 300px 20px;
+  color: $color-accent;
+  font-size: 2rem;
+  font-weight: 700;
+  background-position:center;
+  background-size:cover;
+  letter-spacing: 1px;
+}
+
+.banner { background-image: url("../img/banner-hero.png"); }
+.banner2 { background-image: url("../img/suplementacion.png"); }
+
+.benefits {
+  @include flex-center(row, center, start);
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  .benefit {
+    @include card;
+    width: 300px;
+    min-height: 220px; 
+    padding: 200px 60px;
+    text-align: center;
+    color: $color-text;
+    background-position:center;
+    background-size:cover;
+    strong { color: $color-accent; display: block;}
+  }
+  .benefit1 { background-image: url("/img/gimnasio3.avif"); }
+  .benefit2 { background-image: url("/img/gimnasio2.avif"); }
+  .benefit3 { background-image: url("/img/asesoria.jpg"); }
+}
+
+.form-box {
+  @include card;
+  color: $color-text;
+  padding: 30px;
+  width: 360px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  input {
+    padding: 12px;
+    border: 1px solid $color-accent;
+    border-radius: 6px;
+    background: transparent;
+    color: $color-text;
+  }
+
+  button {
+    background: $color-accent;
+    color: $color-text;
+    padding: 12px;
+    margin: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover { opacity: 0.85; }
+  }
+  // FOOTER (Stacked)
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    footer .socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
